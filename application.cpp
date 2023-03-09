@@ -380,7 +380,7 @@ void Application::changeState(SystemState new_state)
 		setOutput(LED14, OFF);
 
 
-		setOutput(POTENTIOMETER_5V, OFF);
+		setOutput(POTENTIOMETER_5V, OFF); //gives error
 
 		// Bootloader is OK in this State
 		board.setBootloaderSafe(true);
@@ -474,10 +474,13 @@ void Application::sendCANData()
 		msg.setLength(1);
 
 		// Current Analog Voltage Input
-		utemp = getAnalogInput(POTENTIOMETER);
-		//msg.getData()[1] = utemp >> 8;
+		//utemp = getAnalogInput(POTENTIOMETER); //also adds error; tracing code, it likely returns a low voltage; commenting out
+		utemp = 3.5; //temporarily hardcoding 3.5V as utemp
+		msg.getData()[1] = utemp >> 8; //why the fuck does this bitshift by 2^3? getAnalogInput returns a float, but fuck it I guess
+		// bitshift by 8 for a 16bit unsigned int
 		msg.getData()[0] = utemp;
-
+		//commenting out 479
+		msg.getData()[1] =
 		// Send Message
 		board.can.sendMessage(CAN_1, &msg);
 
