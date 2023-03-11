@@ -25,6 +25,7 @@ CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/dr
 CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h
 CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_interface.h
 CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_message.h
+CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/ArrayBuffer.h
 CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_receiver.h
 CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_ports.h
 CAN\ Devices/bms_monitor.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/configuration.h
@@ -78,6 +79,8 @@ C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h:
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_interface.h:
 
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_message.h:
+
+C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/ArrayBuffer.h:
 
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_receiver.h:
 

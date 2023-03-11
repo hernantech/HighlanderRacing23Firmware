@@ -24,6 +24,7 @@ Library/can_system.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverli
 Library/can_system.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h
 Library/can_system.obj: ../Library/can_interface.h
 Library/can_system.obj: ../Library/can_message.h
+Library/can_system.obj: ../Library/ArrayBuffer.h
 Library/can_system.obj: ../Library/can_receiver.h
 Library/can_system.obj: ../Library/can_ports.h
 Library/can_system.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/configuration.h
@@ -75,6 +76,8 @@ C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h:
 ../Library/can_interface.h:
 
 ../Library/can_message.h:
+
+../Library/ArrayBuffer.h:
 
 ../Library/can_receiver.h:
 

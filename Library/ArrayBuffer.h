@@ -1,3 +1,5 @@
+#ifndef __CAN_MESSAGE_H__
+#define __CAN_MESSAGE_H__
 
 class ArrayBuffer
 {
@@ -17,3 +19,5 @@ public:
     int getSize() const;   // return index (used to determine size)
     void clear();          // reset index to 0
 };
+
+#endif

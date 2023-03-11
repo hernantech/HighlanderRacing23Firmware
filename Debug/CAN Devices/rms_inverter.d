@@ -25,6 +25,7 @@ CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/d
 CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/gpio.h
 CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h
 CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_message.h
+CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/ArrayBuffer.h
 CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_receiver.h
 CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_ports.h
 CAN\ Devices/rms_inverter.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/error.h
@@ -78,6 +79,8 @@ C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/gpio.h:
 C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h:
 
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_message.h:
+
+C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/ArrayBuffer.h:
 
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_receiver.h:
 

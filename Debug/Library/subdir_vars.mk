@@ -6,6 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../Library/ArrayBuffer.cpp \
 ../Library/Pin.cpp \
 ../Library/TivaPin.cpp \
 ../Library/can_interface.cpp \
@@ -17,6 +18,7 @@ CPP_SRCS += \
 ../Library/fault_manager.cpp 
 
 OBJS += \
+./Library/ArrayBuffer.obj \
 ./Library/Pin.obj \
 ./Library/TivaPin.obj \
 ./Library/can_interface.obj \
@@ -28,6 +30,7 @@ OBJS += \
 ./Library/fault_manager.obj 
 
 CPP_DEPS += \
+./Library/ArrayBuffer.d \
 ./Library/Pin.d \
 ./Library/TivaPin.d \
 ./Library/can_interface.d \
@@ -39,6 +42,7 @@ CPP_DEPS += \
 ./Library/fault_manager.d 
 
 OBJS__QUOTED += \
+"Library\ArrayBuffer.obj" \
 "Library\Pin.obj" \
 "Library\TivaPin.obj" \
 "Library\can_interface.obj" \
@@ -50,6 +54,7 @@ OBJS__QUOTED += \
 "Library\fault_manager.obj" 
 
 CPP_DEPS__QUOTED += \
+"Library\ArrayBuffer.d" \
 "Library\Pin.d" \
 "Library\TivaPin.d" \
 "Library\can_interface.d" \
@@ -61,6 +66,7 @@ CPP_DEPS__QUOTED += \
 "Library\fault_manager.d" 
 
 CPP_SRCS__QUOTED += \
+"../Library/ArrayBuffer.cpp" \
 "../Library/Pin.cpp" \
 "../Library/TivaPin.cpp" \
 "../Library/can_interface.cpp" \

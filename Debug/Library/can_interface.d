@@ -23,6 +23,7 @@ Library/can_interface.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/drive
 Library/can_interface.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/interrupt.h
 Library/can_interface.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h
 Library/can_interface.obj: ../Library/can_message.h
+Library/can_interface.obj: ../Library/ArrayBuffer.h
 Library/can_interface.obj: ../Library/can_receiver.h
 Library/can_interface.obj: ../Library/can_ports.h
 
@@ -71,6 +72,8 @@ C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/interrupt.h:
 C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/sysctl.h:
 
 ../Library/can_message.h:
+
+../Library/ArrayBuffer.h:
 
 ../Library/can_receiver.h:
 

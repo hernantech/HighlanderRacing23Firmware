@@ -51,6 +51,7 @@ application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/inc/hw_ints.h
 application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/interrupt.h
 application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_interface.h
 application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_message.h
+application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/ArrayBuffer.h
 application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/configuration.h
 application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/error.h
 application.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/TivaPin.h
@@ -158,6 +159,8 @@ C:/Users/joshu/workspace_v10/HighlanderRacing23/driverlib/interrupt.h:
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_interface.h:
 
 C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/can_message.h:
+
+C:/Users/joshu/workspace_v10/HighlanderRacing23/Library/ArrayBuffer.h:
 
 C:/Users/joshu/workspace_v10/HighlanderRacing23/configuration.h:
 
