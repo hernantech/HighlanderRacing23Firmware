@@ -6,6 +6,7 @@
  */
 
 #include "can_message.h"
+#include "ArrayBuffer.h"
 
 CANMessage::CANMessage(IDSize idsize, MessageType msgtype, unsigned char datalength)
 {
@@ -18,7 +19,7 @@ CANMessage::CANMessage(IDSize idsize, MessageType msgtype, unsigned char datalen
 	}
 }
 
-unsigned char* CANMessage::getData()
+unsigned char *CANMessage::getData()
 {
 	return data;
 }
@@ -69,5 +70,14 @@ void CANMessage::setLength(unsigned char length)
 	if (length <= 8)
 	{
 		data_length = length;
+	}
+}
+
+void CANMessage::setMessage(ArrayBuffer message)
+{
+	data_length = message.getSize();
+	for (int i = 0; i < data_length; i++)
+	{
+		data[i] = message.getData()[i];
 	}
 }

@@ -2,14 +2,14 @@
 
 Library/fault_manager.obj: ../Library/fault_manager.cpp
 Library/fault_manager.obj: ../Library/fault_manager.h
-Library/fault_manager.obj: /Users/alexhernandez/workspace_v13/TUT4dump/configuration.h
-Library/fault_manager.obj: /Users/alexhernandez/workspace_v13/TUT4dump/fault_conditions.h
+Library/fault_manager.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/configuration.h
+Library/fault_manager.obj: C:/Users/joshu/workspace_v10/HighlanderRacing23/fault_conditions.h
 
 ../Library/fault_manager.cpp:
 
 ../Library/fault_manager.h:
 
-/Users/alexhernandez/workspace_v13/TUT4dump/configuration.h:
+C:/Users/joshu/workspace_v10/HighlanderRacing23/configuration.h:
 
-/Users/alexhernandez/workspace_v13/TUT4dump/fault_conditions.h:
+C:/Users/joshu/workspace_v10/HighlanderRacing23/fault_conditions.h:
 

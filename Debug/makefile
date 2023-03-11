@@ -2,7 +2,9 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /Applications/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -12,7 +14,7 @@ ORDERED_OBJS += \
 "./functional_io.obj" \
 "./interrupts.obj" \
 "./main.obj" \
-"./tm4c123gh6pge_startup_ccs.obj" \
+"./tm4c123bh6pge_startup_ccs.obj" \
 "./CAN Devices/active_bms_array.obj" \
 "./CAN Devices/active_bms_board.obj" \
 "./CAN Devices/bel_dcdc_converter.obj" \
@@ -69,7 +71,7 @@ ORDERED_OBJS += \
 "./driverlib/udma.obj" \
 "./driverlib/usb.obj" \
 "./driverlib/watchdog.obj" \
-"../tm4c123gh6pge.cmd" \
+"../tm4c123bh6pge.cmd" \
 "../driverlib/ccs/Debug/driverlib.lib" \
 "../driverlib/rvmdk/driverlib.lib" \
 $(GEN_CMDS__FLAG) \
@@ -77,8 +79,8 @@ $(GEN_CMDS__FLAG) \
 
 -include ../makefile.init
 
-RM := rm -rf
-RMDIR := rm -rf
+RM := DEL /F
+RMDIR := RMDIR /S/Q
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -192,32 +194,45 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-TUT4dump.out \
+HighlanderRacing23.out \
 
 EXE_OUTPUTS__QUOTED += \
-"TUT4dump.out" \
+"HighlanderRacing23.out" \
+
+BIN_OUTPUTS += \
+HighlanderRacing23.hex \
+
+BIN_OUTPUTS__QUOTED += \
+"HighlanderRacing23.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "TUT4dump.out"
+	@$(MAKE) --no-print-directory -Onone "HighlanderRacing23.out"
 
 # Tool invocations
-TUT4dump.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+HighlanderRacing23.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/Applications/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PGE -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TUT4dump.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/Applications/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TUT4dump_linkInfo.xml" --rom_model -o "TUT4dump.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123BH6PGE -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"HighlanderRacing23.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/lib" -i"C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="HighlanderRacing23_linkInfo.xml" --rom_model -o "HighlanderRacing23.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
+	@echo ' '
+
+HighlanderRacing23.hex: $(EXE_OUTPUTS)
+	@echo 'Building secondary target: "$@"'
+	@echo 'Invoking: Arm Hex Utility'
+	"C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/bin/armhex" --diag_wrap=off -o "HighlanderRacing23.hex" $(EXE_OUTPUTS__QUOTED)
+	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "application.obj" "functional_io.obj" "interrupts.obj" "main.obj" "tm4c123gh6pge_startup_ccs.obj" "CAN Devices/active_bms_array.obj" "CAN Devices/active_bms_board.obj" "CAN Devices/bel_dcdc_converter.obj" "CAN Devices/bms1000m.obj" "CAN Devices/bms_monitor.obj" "CAN Devices/bms_monitor_array.obj" "CAN Devices/cab300.obj" "CAN Devices/current_ways_charger.obj" "CAN Devices/delphi_u2c.obj" "CAN Devices/eltek_charger.obj" "CAN Devices/mmc4000.obj" "CAN Devices/rms_fast_charger.obj" "CAN Devices/rms_inverter.obj" "Devices/vcu1200_board.obj" "Library/Pin.obj" "Library/TivaPin.obj" "Library/can_interface.obj" "Library/can_message.obj" "Library/can_receiver.obj" "Library/can_system.obj" "Library/critical.obj" "Library/error.obj" "Library/fault_manager.obj" "driverlib/adc.obj" "driverlib/aes.obj" "driverlib/can.obj" "driverlib/comp.obj" "driverlib/cpu.obj" "driverlib/crc.obj" "driverlib/des.obj" "driverlib/eeprom.obj" "driverlib/emac.obj" "driverlib/epi.obj" "driverlib/epi_workaround_ccs.obj" "driverlib/flash.obj" 
-	-$(RM) "driverlib/fpu.obj" "driverlib/gpio.obj" "driverlib/hibernate.obj" "driverlib/i2c.obj" "driverlib/interrupt.obj" "driverlib/lcd.obj" "driverlib/mpu.obj" "driverlib/onewire.obj" "driverlib/pwm.obj" "driverlib/qei.obj" "driverlib/shamd5.obj" "driverlib/ssi.obj" "driverlib/sw_crc.obj" "driverlib/sysctl.obj" "driverlib/sysexc.obj" "driverlib/systick.obj" "driverlib/timer.obj" "driverlib/uart.obj" "driverlib/udma.obj" "driverlib/usb.obj" "driverlib/watchdog.obj" 
-	-$(RM) "main.d" "tm4c123gh6pge_startup_ccs.d" "driverlib/adc.d" "driverlib/aes.d" "driverlib/can.d" "driverlib/comp.d" "driverlib/cpu.d" "driverlib/crc.d" "driverlib/des.d" "driverlib/eeprom.d" "driverlib/emac.d" "driverlib/epi.d" "driverlib/flash.d" "driverlib/fpu.d" "driverlib/gpio.d" "driverlib/hibernate.d" "driverlib/i2c.d" "driverlib/interrupt.d" "driverlib/lcd.d" "driverlib/mpu.d" "driverlib/onewire.d" "driverlib/pwm.d" "driverlib/qei.d" "driverlib/shamd5.d" "driverlib/ssi.d" "driverlib/sw_crc.d" "driverlib/sysctl.d" "driverlib/sysexc.d" "driverlib/systick.d" "driverlib/timer.d" "driverlib/uart.d" "driverlib/udma.d" "driverlib/usb.d" "driverlib/watchdog.d" 
-	-$(RM) "application.d" "functional_io.d" "interrupts.d" "main.d" "CAN Devices/active_bms_array.d" "CAN Devices/active_bms_board.d" "CAN Devices/bel_dcdc_converter.d" "CAN Devices/bms1000m.d" "CAN Devices/bms_monitor.d" "CAN Devices/bms_monitor_array.d" "CAN Devices/cab300.d" "CAN Devices/current_ways_charger.d" "CAN Devices/delphi_u2c.d" "CAN Devices/eltek_charger.d" "CAN Devices/mmc4000.d" "CAN Devices/rms_fast_charger.d" "CAN Devices/rms_inverter.d" "Devices/vcu1200_board.d" "Library/Pin.d" "Library/TivaPin.d" "Library/can_interface.d" "Library/can_message.d" "Library/can_receiver.d" "Library/can_system.d" "Library/critical.d" "Library/error.d" "Library/fault_manager.d" 
-	-$(RM) "driverlib/epi_workaround_ccs.d" 
+	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
+	-$(RM) "application.obj" "functional_io.obj" "interrupts.obj" "main.obj" "tm4c123bh6pge_startup_ccs.obj" "CAN Devices\active_bms_array.obj" "CAN Devices\active_bms_board.obj" "CAN Devices\bel_dcdc_converter.obj" "CAN Devices\bms1000m.obj" "CAN Devices\bms_monitor.obj" "CAN Devices\bms_monitor_array.obj" "CAN Devices\cab300.obj" "CAN Devices\current_ways_charger.obj" "CAN Devices\delphi_u2c.obj" "CAN Devices\eltek_charger.obj" "CAN Devices\mmc4000.obj" "CAN Devices\rms_fast_charger.obj" "CAN Devices\rms_inverter.obj" "Devices\vcu1200_board.obj" "Library\Pin.obj" "Library\TivaPin.obj" "Library\can_interface.obj" "Library\can_message.obj" "Library\can_receiver.obj" "Library\can_system.obj" "Library\critical.obj" "Library\error.obj" "Library\fault_manager.obj" "driverlib\adc.obj" "driverlib\aes.obj" "driverlib\can.obj" "driverlib\comp.obj" "driverlib\cpu.obj" "driverlib\crc.obj" "driverlib\des.obj" "driverlib\eeprom.obj" "driverlib\emac.obj" "driverlib\epi.obj" "driverlib\epi_workaround_ccs.obj" "driverlib\flash.obj" 
+	-$(RM) "driverlib\fpu.obj" "driverlib\gpio.obj" "driverlib\hibernate.obj" "driverlib\i2c.obj" "driverlib\interrupt.obj" "driverlib\lcd.obj" "driverlib\mpu.obj" "driverlib\onewire.obj" "driverlib\pwm.obj" "driverlib\qei.obj" "driverlib\shamd5.obj" "driverlib\ssi.obj" "driverlib\sw_crc.obj" "driverlib\sysctl.obj" "driverlib\sysexc.obj" "driverlib\systick.obj" "driverlib\timer.obj" "driverlib\uart.obj" "driverlib\udma.obj" "driverlib\usb.obj" "driverlib\watchdog.obj" 
+	-$(RM) "main.d" "tm4c123bh6pge_startup_ccs.d" "driverlib\adc.d" "driverlib\aes.d" "driverlib\can.d" "driverlib\comp.d" "driverlib\cpu.d" "driverlib\crc.d" "driverlib\des.d" "driverlib\eeprom.d" "driverlib\emac.d" "driverlib\epi.d" "driverlib\flash.d" "driverlib\fpu.d" "driverlib\gpio.d" "driverlib\hibernate.d" "driverlib\i2c.d" "driverlib\interrupt.d" "driverlib\lcd.d" "driverlib\mpu.d" "driverlib\onewire.d" "driverlib\pwm.d" "driverlib\qei.d" "driverlib\shamd5.d" "driverlib\ssi.d" "driverlib\sw_crc.d" "driverlib\sysctl.d" "driverlib\sysexc.d" "driverlib\systick.d" "driverlib\timer.d" "driverlib\uart.d" "driverlib\udma.d" "driverlib\usb.d" "driverlib\watchdog.d" 
+	-$(RM) "application.d" "functional_io.d" "interrupts.d" "main.d" "CAN Devices\active_bms_array.d" "CAN Devices\active_bms_board.d" "CAN Devices\bel_dcdc_converter.d" "CAN Devices\bms1000m.d" "CAN Devices\bms_monitor.d" "CAN Devices\bms_monitor_array.d" "CAN Devices\cab300.d" "CAN Devices\current_ways_charger.d" "CAN Devices\delphi_u2c.d" "CAN Devices\eltek_charger.d" "CAN Devices\mmc4000.d" "CAN Devices\rms_fast_charger.d" "CAN Devices\rms_inverter.d" "Devices\vcu1200_board.d" "Library\Pin.d" "Library\TivaPin.d" "Library\can_interface.d" "Library\can_message.d" "Library\can_receiver.d" "Library\can_system.d" "Library\critical.d" "Library\error.d" "Library\fault_manager.d" 
+	-$(RM) "driverlib\epi_workaround_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
