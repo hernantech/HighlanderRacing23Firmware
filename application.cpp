@@ -21,8 +21,6 @@ Application application;
 // Reference to Board Object
 extern VCU1200_Board board;
 
-OutputSignal LEDS[14] = {LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9, LED10, LED11, LED12, LED13, LED14};
-
 Application::Application()
 {
 }
@@ -78,16 +76,260 @@ void Application::calculateLEDS()
 
 		// potentiometer_command = getAnalogInput(POTENTIOMETER);
 
-		for (int i = 0; i < 14; i++)
+		if (potentiometer_command == 14)
 		{
-			if (i < potentiometer_command)
-			{
-				setOutput(LEDS[i], ON);
-			}
-			else
-			{
-				setOutput(LEDS[i], OFF);
-			}
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, ON);
+			setOutput(LED10, ON);
+			setOutput(LED11, ON);
+			setOutput(LED12, ON);
+			setOutput(LED13, ON);
+			setOutput(LED14, ON);
+		}
+		else if (potentiometer_command == 13)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, ON);
+			setOutput(LED10, ON);
+			setOutput(LED11, ON);
+			setOutput(LED12, ON);
+			setOutput(LED13, ON);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 12)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, ON);
+			setOutput(LED10, ON);
+			setOutput(LED11, ON);
+			setOutput(LED12, ON);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 11)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, ON);
+			setOutput(LED10, ON);
+			setOutput(LED11, ON);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 10)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, ON);
+			setOutput(LED10, ON);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 9)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, ON);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 8)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, ON);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 7)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, ON);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 6)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, ON);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 5)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, ON);
+			setOutput(LED6, OFF);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 4)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, ON);
+			setOutput(LED5, OFF);
+			setOutput(LED6, OFF);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 3)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, ON);
+			setOutput(LED4, OFF);
+			setOutput(LED5, OFF);
+			setOutput(LED6, OFF);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 2)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, ON);
+			setOutput(LED3, OFF);
+			setOutput(LED4, OFF);
+			setOutput(LED5, OFF);
+			setOutput(LED6, OFF);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 1)
+		{
+			setOutput(LED1, ON);
+			setOutput(LED2, OFF);
+			setOutput(LED3, OFF);
+			setOutput(LED4, OFF);
+			setOutput(LED5, OFF);
+			setOutput(LED6, OFF);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
+		}
+		else if (potentiometer_command == 0)
+		{
+			setOutput(LED1, OFF);
+			setOutput(LED2, OFF);
+			setOutput(LED3, OFF);
+			setOutput(LED4, OFF);
+			setOutput(LED5, OFF);
+			setOutput(LED6, OFF);
+			setOutput(LED7, OFF);
+			setOutput(LED8, OFF);
+			setOutput(LED9, OFF);
+			setOutput(LED10, OFF);
+			setOutput(LED11, OFF);
+			setOutput(LED12, OFF);
+			setOutput(LED13, OFF);
+			setOutput(LED14, OFF);
 		}
 	}
 }
@@ -98,10 +340,20 @@ void Application::changeState(SystemState new_state)
 	{
 	case STARTUP:
 		// Set Default Actions for this state
-		for (int i = 0; i < 14; i++)
-		{
-			setOutput(LEDS[i], OFF);
-		}
+		setOutput(LED1, OFF);
+		setOutput(LED2, OFF);
+		setOutput(LED3, OFF);
+		setOutput(LED4, OFF);
+		setOutput(LED5, OFF);
+		setOutput(LED6, OFF);
+		setOutput(LED7, OFF);
+		setOutput(LED8, OFF);
+		setOutput(LED9, OFF);
+		setOutput(LED10, OFF);
+		setOutput(LED11, OFF);
+		setOutput(LED12, OFF);
+		setOutput(LED13, OFF);
+		setOutput(LED14, OFF);
 
 		// Bootloader is OK in this State
 		board.setBootloaderSafe(true);
@@ -112,10 +364,20 @@ void Application::changeState(SystemState new_state)
 
 	case SYSTEM_OFF:
 		// Set Default Actions for this state
-		for (int i = 0; i < 14; i++)
-		{
-			setOutput(LEDS[i], OFF);
-		}
+		setOutput(LED1, OFF);
+		setOutput(LED2, OFF);
+		setOutput(LED3, OFF);
+		setOutput(LED4, OFF);
+		setOutput(LED5, OFF);
+		setOutput(LED6, OFF);
+		setOutput(LED7, OFF);
+		setOutput(LED8, OFF);
+		setOutput(LED9, OFF);
+		setOutput(LED10, OFF);
+		setOutput(LED11, OFF);
+		setOutput(LED12, OFF);
+		setOutput(LED13, OFF);
+		setOutput(LED14, OFF);
 
 		// setOutput(POTENTIOMETER_5V, OFF); // gives error
 
