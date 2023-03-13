@@ -28,6 +28,8 @@ VCU1200_Board::VCU1200_Board()
 
 void VCU1200_Board::blinkLED()
 {
+	
+	setOutput(STATUS_LED_2, HIGH);
 	if (startup_counter % blink_rate == 0)
 	{
 		// Turn On LED

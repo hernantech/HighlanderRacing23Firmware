@@ -49,10 +49,10 @@ void Application::tick()
 	processState();
 
 	// Blink the Lights With User Input
-	calculateLEDS();
+	//calculateLEDS();
 
 	// Send CAN Data
-	sendCANData();
+	//sendCANData();
 
 	// Increment Counters
 	incrementCounters();
@@ -76,19 +76,17 @@ void Application::calculateLEDS()
 					setOutput(LED[i], OFF);
 				}*/
 
-		potentiometer_command = 14;
+		// potentiometer_command = 14;
 
-		for (int i = 0; i < 14; i++)
-		{
-			if (i < potentiometer_command)
-			{
-				setOutput(LEDS[i], ON);
-			}
-			else
-			{
-				setOutput(LEDS[i], OFF);
-			}
-		}
+		setOutput(LED1, ON);
+		setOutput(LED2, ON);
+		setOutput(LED3, ON);
+		setOutput(LED4, ON);
+		setOutput(LED5, ON);
+		setOutput(LED6, ON);
+		setOutput(LED7, ON);
+		setOutput(LED8, ON);
+		setOutput(LED9, ON);
 	}
 }
 
@@ -98,10 +96,15 @@ void Application::changeState(SystemState new_state)
 	{
 	case STARTUP:
 		// Set Default Actions for this state
-		for (int i = 0; i < 14; i++)
-		{
-			setOutput(LEDS[i], OFF);
-		}
+		setOutput(LED1, OFF);
+		setOutput(LED2, OFF);
+		setOutput(LED3, OFF);
+		setOutput(LED4, OFF);
+		setOutput(LED5, OFF);
+		setOutput(LED6, OFF);
+		setOutput(LED7, OFF);
+		setOutput(LED8, OFF);
+		setOutput(LED9, OFF);
 
 		// Bootloader is OK in this State
 		board.setBootloaderSafe(true);
@@ -112,10 +115,15 @@ void Application::changeState(SystemState new_state)
 
 	case SYSTEM_OFF:
 		// Set Default Actions for this state
-		for (int i = 0; i < 14; i++)
-		{
-			setOutput(LEDS[i], OFF);
-		}
+		setOutput(LED1, OFF);
+		setOutput(LED2, OFF);
+		setOutput(LED3, OFF);
+		setOutput(LED4, OFF);
+		setOutput(LED5, OFF);
+		setOutput(LED6, OFF);
+		setOutput(LED7, OFF);
+		setOutput(LED8, OFF);
+		setOutput(LED9, OFF);
 
 		// setOutput(POTENTIOMETER_5V, OFF); // gives error
 
@@ -129,7 +137,15 @@ void Application::changeState(SystemState new_state)
 	case SYSTEM_ON:
 		// Analog Controlled Lights
 		// Actions Defined in calculateLEDS function called in tick() function
-
+        setOutput(LED1, ON);
+        setOutput(LED2, ON);
+        setOutput(LED3, ON);
+        setOutput(LED4, ON);
+        setOutput(LED5, ON);
+        setOutput(LED6, ON);
+        setOutput(LED7, ON);
+        setOutput(LED8, ON);
+        setOutput(LED9, ON);
 		// setOutput(POTENTIOMETER_5V, ON);
 
 		// Bootloader is OK in this State
