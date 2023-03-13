@@ -380,7 +380,7 @@ void Application::changeState(SystemState new_state)
 		setOutput(LED14, OFF);
 
 
-		setOutput(POTENTIOMETER_5V, OFF); //gives error
+//		setOutput(POTENTIOMETER_5V, OFF); //gives error
 
 		// Bootloader is OK in this State
 		board.setBootloaderSafe(true);
@@ -393,7 +393,7 @@ void Application::changeState(SystemState new_state)
 		//Analog Controlled Lights
 		//Actions Defined in calculateLEDS function called in tick() function
 
-		setOutput(POTENTIOMETER_5V, ON);
+//		setOutput(POTENTIOMETER_5V, ON);
 
 
 		// Bootloader is OK in this State
@@ -474,13 +474,13 @@ void Application::sendCANData()
 		msg.setLength(1);
 
 		// Current Analog Voltage Input
-		//utemp = getAnalogInput(POTENTIOMETER); //also adds error; tracing code, it likely returns a low voltage; commenting out
+//		utemp = getAnalogInput(POTENTIOMETER); //also adds error; tracing code, it likely returns a low voltage; commenting out
 		utemp = 3.5; //temporarily hardcoding 3.5V as utemp
 		msg.getData()[1] = utemp >> 8; //why the fuck does this bitshift by 2^3? getAnalogInput returns a float, but fuck it I guess
 		// bitshift by 8 for a 16bit unsigned int
 		msg.getData()[0] = utemp;
 		//commenting out 479
-		msg.getData()[1] =
+//		msg.getData()[1] =
 		// Send Message
 		board.can.sendMessage(CAN_1, &msg);
 
@@ -600,20 +600,20 @@ void Application::processState()
 	case SYSTEM_OFF:
 		if(state_counter >= MIN_STATE_TIME)
 		{
-			if(getInput(ON_OFF_SWITCH))
-			{
-				changeState(SYSTEM_ON);
-			}
+//			if(getInput(ON_OFF_SWITCH))
+//			{
+//				changeState(SYSTEM_ON);
+//			}
 		}
 		break;
 
 	case SYSTEM_ON:
 		if(state_counter >= MIN_STATE_TIME)
 		{
-			if(!getInput(ON_OFF_SWITCH))
-			{
-				changeState(SYSTEM_OFF);
-			}
+//			if(!getInput(ON_OFF_SWITCH))
+//			{
+//				changeState(SYSTEM_OFF);
+//			}
 		}
 		break;
 	}
