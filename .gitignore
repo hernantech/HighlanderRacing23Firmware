@@ -31,5 +31,7 @@
 *.out
 *.app
 
+*.mk
+
 # folders
 Debug/
