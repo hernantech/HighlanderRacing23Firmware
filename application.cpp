@@ -76,7 +76,7 @@ void Application::calculateLEDS()
 					setOutput(LED[i], OFF);
 				}*/
 
-		// potentiometer_command = getAnalogInput(POTENTIOMETER);
+		potentiometer_command = 14;
 
 		for (int i = 0; i < 14; i++)
 		{
