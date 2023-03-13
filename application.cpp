@@ -329,7 +329,7 @@ void Application::processState()
 	case STARTUP:
 		if (state_counter >= MIN_STATE_TIME)
 		{
-			changeState(SYSTEM_OFF);
+			changeState(SYSTEM_ON);
 		}
 		break;
 
