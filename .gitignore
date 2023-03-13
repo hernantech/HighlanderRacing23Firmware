@@ -31,5 +31,12 @@
 *.out
 *.app
 
-# folders
+# ide files and folders
 Debug/
+.cproject
+.launches/
+.project
+.settings/
+*.ccxml
+*.cmd
+*.c
