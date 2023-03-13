@@ -9,6 +9,7 @@
 #define CAN_MESSAGE_H_
 
 #include <stdint.h>
+#include "ArrayBuffer.h"
 
 class CANMessage
 {
@@ -34,7 +35,7 @@ public:
 	CANMessage(IDSize idsize, MessageType msgtype, unsigned char datalength);
 
 	// Return Pointer to Data Array
-	unsigned char* getData();
+	unsigned char *getData();
 
 	// Get Message ID
 	uint32_t getID();
@@ -53,6 +54,9 @@ public:
 
 	// Set Message Length
 	void setLength(unsigned char length);
+
+	// Set Message
+	void setMessage(ArrayBuffer message);
 
 private:
 	// ID Type
